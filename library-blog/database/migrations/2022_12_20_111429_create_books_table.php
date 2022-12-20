@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('number of pages');
-            /*$table->foreignId('author_id')->references('id')->on('authors');
-            $table->foreignId('publisher_id')->references('id')->on('publishers');
-            $table->foreignId('genre_id')->references('id')->on('genres');*/
+            $table->foreignId('author_id');
+            $table->foreignId('publisher_id');
+            $table->foreignId('genre_id');
             $table->timestamps();
         });
     }
