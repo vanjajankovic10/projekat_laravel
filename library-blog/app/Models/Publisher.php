@@ -12,4 +12,8 @@ class Publisher extends Model
         'PIB',
         'name',
     ];
+
+    public function books(){
+        return $this->hasMany(Book::class);
+    }
 }
